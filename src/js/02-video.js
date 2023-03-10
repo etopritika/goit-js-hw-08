@@ -6,7 +6,7 @@ const player = new Player(iframe);
 const throttledOnLocalStorage = _.throttle(onPlay, 1000);
 // console.log(iframe);
 // console.log(player);
-
+player.on('play', throttledOnLocalStorage);
 player.on('timeupdate', onPlay);
 player.on('play', timeUpdate);
 
