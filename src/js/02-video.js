@@ -6,12 +6,10 @@ const player = new Player(iframe);
 // console.log(iframe);
 // console.log(player);
 
-player.on('play', function () {
-  localStorage.setItem('videoplayer-current-time', data), 1000;
-});
+player.on('play', onPlay);
 
 const onPlay = function (data) {
-  localStorage.getItem('videoplayer-current-time');
+  localStorage.setItem('videoplayer-current-time', currentTime);
   const currentTime = {
     duration: 61.857,
     percent: 0.049,
@@ -19,4 +17,3 @@ const onPlay = function (data) {
   };
   player.setCurrentTime(currentTime);
 };
-player.on('play', onPlay);
