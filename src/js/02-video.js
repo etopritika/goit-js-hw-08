@@ -16,4 +16,5 @@ const onPlay = function (data) {
 //     seconds: 3.034,
 //   };
 //   player.setCurrentTime(currentTime);
+console.log(data);
 };
